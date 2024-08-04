@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+//! VARIABLES GLOBALES //
+
+:root {
+  /* COLORS */
+  --headerfoot-bg: #2b024a;
+  --default-bg: #f4e7ff;
+  --maincolor: #4b1a72;
+  --cards-bgr: #e4cff5;
+  --greycolor: #3a3a3a;
+  --whitebg: #d399ff;
+  --walterwhite: #ffffff;
+  --lightblue: #0bc1f3;
+  --articlelight: #b7f0ff;
+
+  /* PADDING */
+  --padding-s: 0.5em;
+  --padding-m: 1em;
+  --padding-l: 2em;
+  --padding-xl: 3em;
+  --padding-xxl: 4em;
+  --padding-xxxl: 10em;
+
+  /* MARGIN */
+  --margin-s: 0.5em;
+  --margin-m: 1em;
+  --margin-l: 2em;
+  --margin-xl: 3em;
+  --margin-xxl: 4em;
+  --margin-xxxl: 10em;
+
+  /* GAP */
+
+  --gap-s: 0.5em;
+  --gap-m: 1em;
+  --gap-l: 2em;
+  --gap-xl: 3em;
+  --gap-xxl: 4em;
+  --gap-xxxl: 10em;
+
+  /* switch */
+  --switch-bg: rgb(135, 150, 165);
+  --switch-width: 48px;
+  --switch-height: 20px;
+  /* circle */
+  --circle-diameter: 32px;
+  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+@mixin flexbox() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}

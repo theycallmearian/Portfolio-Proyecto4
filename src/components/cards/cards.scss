@@ -1,0 +1,73 @@
+.projects {
+  margin: var(--margin-m);
+  text-align: center;
+}
+
+.card-container {
+  padding-top: var(--padding-l);
+  padding-bottom: var(--padding-l);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: var(--gap-xl);
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--articlelight);
+  border-radius: 8px;
+  padding: var(--padding-m);
+  width: 19em;
+  height: 25em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main.dark .card {
+  background-color: var(--cards-bgr);
+}
+
+.card:hover {
+  transition: 0.9s;
+  transform: scale(1.1);
+}
+
+.card img {
+  max-width: 100%;
+  height: 12em;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5em;
+  text-align: left;
+  margin: 8px 0;
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.card-description {
+  font-size: 0.9em;
+  text-align: left;
+  color: var(--greycolor);
+  margin: 8px 0;
+  flex-grow: 1;
+}
+
+.card button.view {
+  background-color: var(--lightblue);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 0;
+  margin-top: auto;
+  padding: var(--padding-m);
+}
+
+main.dark .card button.view {
+  background-color: var(--maincolor);
+}

@@ -1,0 +1,52 @@
+.contact {
+  margin: var(--margin-l);
+  padding: var(--padding-l);
+  text-align: center;
+  background-image: url(./public/assets/backgroundcontact.gif);
+}
+
+main.dark .contact {
+  background-image: url(./public/assets/conectamospurple.gif);
+}
+
+main.dark .contact {
+  background-color: var(--cards-bgr);
+}
+
+.contact-download-button {
+  border: none;
+  background-color: var(--lightblue);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: var(--margin-m);
+  margin-right: 0;
+  padding: var(--padding-m);
+  font-size: 1.3em;
+  &:hover {
+    background-color: var(--articlelight);
+  }
+}
+.contact p {
+  line-height: 2em;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+main.dark .contact p {
+  color: var(--walterwhite);
+}
+
+main.dark .contact-download-button {
+  font-size: 1.3em;
+  text-align: center;
+  background-color: var(--headerfoot-bg);
+  cursor: pointer;
+  color: white;
+  &:hover {
+    background-color: #910aff;
+  }
+}
+
+main.dark .contact-container h3 {
+  color: var(--walterwhite);
+}
