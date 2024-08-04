@@ -17,7 +17,8 @@ export const createHeader = () => {
   const hamburger = document.createElement('div')
   const hamburgerImg = document.createElement('img')
 
-  logo.src = './public/assets/ariandevlogo_w.png'
+  logo.src =
+    'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769568/public/assets/ariandevlogo_w_y7oohu.png'
   logo.alt = 'Logotipo de <arian.dev/>'
   logo.classList.add('logo')
 
@@ -68,7 +69,8 @@ export const createHeader = () => {
   circle.classList.add('circle')
 
   hamburger.classList.add('hamburger')
-  hamburgerImg.src = './public/assets/Hamburger.png'
+  hamburgerImg.src =
+    'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/Hamburger_fnbfw0.png'
   hamburgerImg.alt = 'Menu'
 
   header.appendChild(logo)
@@ -90,9 +92,11 @@ export const createHeader = () => {
   hamburger.addEventListener('click', () => {
     ul.classList.toggle('active')
     if (ul.classList.contains('active')) {
-      hamburgerImg.src = './public/assets/close.png'
+      hamburgerImg.src =
+        'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769568/public/assets/close_fchcbh.png'
     } else {
-      hamburgerImg.src = './public/assets/Hamburger.png'
+      hamburgerImg.src =
+        'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/Hamburger_fnbfw0.png'
     }
   })
 

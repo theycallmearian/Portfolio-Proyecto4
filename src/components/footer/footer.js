@@ -23,7 +23,8 @@ export const createFooter = () => {
   linkedInIcon.classList.add('footer-icon')
 
   const linkedInImg = document.createElement('img')
-  linkedInImg.src = './public/assets/linkedin.svg'
+  linkedInImg.src =
+    'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/linkedin_vhxtyl.svg'
   linkedInImg.alt = 'LinkedIn'
   linkedInIcon.appendChild(linkedInImg)
 
@@ -32,7 +33,8 @@ export const createFooter = () => {
   githubIcon.classList.add('footer-icon')
 
   const githubImg = document.createElement('img')
-  githubImg.src = './public/assets/github.svg'
+  githubImg.src =
+    'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/github_paii0m.svg'
   githubImg.alt = 'GitHub'
   githubIcon.appendChild(githubImg)
 
