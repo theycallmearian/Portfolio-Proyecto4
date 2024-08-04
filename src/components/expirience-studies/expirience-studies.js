@@ -17,12 +17,12 @@ export const experienceAndStudies = () => {
     const experienceTab = document.createElement('button')
     experienceTab.id = 'experienceTab'
     experienceTab.classList.add('tab', 'active')
-    experienceTab.textContent = 'Experience'
+    experienceTab.textContent = 'Experiencia'
 
     const studiesTab = document.createElement('button')
     studiesTab.id = 'studiesTab'
     studiesTab.classList.add('tab')
-    studiesTab.textContent = 'Studies'
+    studiesTab.textContent = 'Estudios'
 
     tabs.appendChild(experienceTab)
     tabs.appendChild(studiesTab)
