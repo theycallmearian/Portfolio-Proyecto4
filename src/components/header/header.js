@@ -1,104 +1,73 @@
-import './header.scss'
+import './header.scss';
 
 export const createHeader = () => {
-  const header = document.createElement('header')
-  const logo = document.createElement('img')
-  const nav = document.createElement('nav')
-  const ul = document.createElement('ul')
-  const sobreMi = document.createElement('li')
-  const habilidades = document.createElement('li')
-  const experiencia = document.createElement('li')
-  const proyectos = document.createElement('li')
-  const contacto = document.createElement('li')
-  const switchLabel = document.createElement('label')
-  const switchInput = document.createElement('input')
-  const slider = document.createElement('div')
-  const circle = document.createElement('div')
-  const hamburger = document.createElement('div')
-  const hamburgerImg = document.createElement('img')
+  const header = document.createElement('header');
+  const nav = document.createElement('nav');
+  const ul = document.createElement('ul');
+  
+  // Crear y configurar el logo
+  const logo = document.createElement('img');
+  logo.src = 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769568/public/assets/ariandevlogo_w_y7oohu.png';
+  logo.alt = 'Logotipo de <arian.dev/>';
+  logo.classList.add('logo');
 
-  logo.src =
-    'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769568/public/assets/ariandevlogo_w_y7oohu.png'
-  logo.alt = 'Logotipo de <arian.dev/>'
-  logo.classList.add('logo')
+  // Crear switch para el tema
+  const switchLabel = document.createElement('label');
+  const switchInput = document.createElement('input');
+  const slider = document.createElement('div');
+  const circle = document.createElement('div');
+  switchLabel.classList.add('ui-switch');
+  switchLabel.setAttribute('for', 'switch');
+  switchInput.id = 'switch';
+  switchInput.classList.add('switch__input');
+  switchInput.type = 'checkbox';
+  slider.classList.add('slider');
+  circle.classList.add('circle');
+  slider.appendChild(circle);
+  switchLabel.appendChild(switchInput);
+  switchLabel.appendChild(slider);
 
-  nav.classList.add('navbar')
-  ul.classList.add('nav-list')
-  sobreMi.textContent = 'Sobre mí'
-  sobreMi.classList.add('mainmenu')
-  sobreMi.addEventListener('click', () => {
-    const element = document.getElementById('aboutme')
-    if (element) {
-      setTimeout(() => {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }, 100)
-    }
-  })
-  habilidades.textContent = 'Habilidades'
-  habilidades.classList.add('mainmenu')
-  habilidades.addEventListener('click', () => {
-    document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })
-  })
-  experiencia.textContent = 'Experiencia'
-  experiencia.classList.add('mainmenu')
-  experiencia.addEventListener('click', () => {
-    document.getElementById('expirience').scrollIntoView({ behavior: 'smooth' })
-  })
-  proyectos.textContent = 'Proyectos'
-  proyectos.classList.add('mainmenu')
-  proyectos.addEventListener('click', () => {
-    document
-      .getElementById('top-projects')
-      .scrollIntoView({ behavior: 'smooth' })
-  })
-  contacto.textContent = 'Contacto'
-  contacto.classList.add('mainmenu')
-  contacto.addEventListener('click', () => {
-    document.getElementById('conect').scrollIntoView({ behavior: 'smooth' })
-  })
-
-  switchLabel.classList.add('ui-switch')
-  switchLabel.setAttribute('for', 'switch')
-  switchInput.id = 'switch'
-  switchInput.classList.add('switch__input')
-  switchInput.name = 'switch'
-  switchInput.type = 'checkbox'
-
-  slider.classList.add('slider')
-
-  circle.classList.add('circle')
-
-  hamburger.classList.add('hamburger')
-  hamburgerImg.src =
-    'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/Hamburger_fnbfw0.png'
-  hamburgerImg.alt = 'Menu'
-
-  header.appendChild(logo)
-  header.appendChild(nav)
-  nav.appendChild(ul)
-  ul.appendChild(sobreMi)
-  ul.appendChild(habilidades)
-  ul.appendChild(experiencia)
-  ul.appendChild(proyectos)
-  ul.appendChild(contacto)
-  hamburger.appendChild(hamburgerImg)
-  nav.appendChild(hamburger)
-
-  switchLabel.appendChild(switchInput)
-  switchLabel.appendChild(slider)
-  slider.appendChild(circle)
-  header.appendChild(switchLabel)
-
+  // Crear el menú hamburguesa
+  const hamburger = document.createElement('div');
+  const hamburgerImg = document.createElement('img');
+  hamburger.classList.add('hamburger');
+  hamburgerImg.src = 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/Hamburger_fnbfw0.png';
+  hamburgerImg.alt = 'Menu';
+  hamburger.appendChild(hamburgerImg);
   hamburger.addEventListener('click', () => {
-    ul.classList.toggle('active')
-    if (ul.classList.contains('active')) {
-      hamburgerImg.src =
-        'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769568/public/assets/close_fchcbh.png'
-    } else {
-      hamburgerImg.src =
-        'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/Hamburger_fnbfw0.png'
-    }
-  })
+    ul.classList.toggle('active');
+    hamburgerImg.src = ul.classList.contains('active') ?
+      'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769568/public/assets/close_fchcbh.png' :
+      'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769574/public/assets/Hamburger_fnbfw0.png';
+  });
 
-  document.body.prepend(header)
-}
+  // Función auxiliar para crear ítems de menú
+  function createMenuItem(id, text) {
+    const li = document.createElement('li');
+    li.textContent = text;
+    li.classList.add('mainmenu');
+    li.addEventListener('click', () => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+    return li;
+  }
+
+  // Agregar ítems al menú
+  ul.appendChild(createMenuItem('aboutme', 'Sobre mí'));
+  ul.appendChild(createMenuItem('skills', 'Habilidades'));
+  ul.appendChild(createMenuItem('experience', 'Experiencia'));
+  ul.appendChild(createMenuItem('top-projects', 'Proyectos'));
+  ul.appendChild(createMenuItem('contact', 'Contacto'));
+
+  // Construcción final del header
+  nav.appendChild(ul);
+  nav.appendChild(hamburger);
+  header.appendChild(logo);
+  header.appendChild(nav);
+  header.appendChild(switchLabel);
+
+  document.body.prepend(header);
+};
