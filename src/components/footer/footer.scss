@@ -51,4 +51,6 @@ footer.dark .footer-icon img:hover {
 
 .footer-icon img:hover {
   filter: invert(0%);
+  transition: 0.3s;
+  transform: scale(1.3);
 }

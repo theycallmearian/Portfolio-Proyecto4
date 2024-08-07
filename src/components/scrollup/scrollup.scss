@@ -1,8 +1,8 @@
 .scroll-up-button {
   padding-top: 10px;
   position: fixed;
-  bottom: 3.5em;
-  right: 3.5em;
+  bottom: 2em;
+  right: -1em;
   background-color: var(--lightblue);
   color: var(--walterwhite);
   border: none;
@@ -32,4 +32,19 @@
   &:hover {
     box-shadow: 0px 0px 15px 15px #a024ff;
   }
+}
+
+@media (max-width: 768px) {
+ .scroll-up-button {
+    bottom: 0.7em;
+    right: -1.6em;
+    width: 1.5em;
+    height: 1.5em;
+     &:hover {
+    box-shadow: 0px 0px 8px 8px #00eeff;
+        }
+}
+  .dark .scroll-up-button:hover {
+    box-shadow: 0 0 8px 8px #a024ff;
+}
 }

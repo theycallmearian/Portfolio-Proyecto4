@@ -15,6 +15,7 @@ main.dark .contact {
 
 .contact-download-button {
   border: none;
+  color: var(--walterwhite);
   background-color: var(--lightblue);
   border-radius: 5px;
   cursor: pointer;
@@ -23,7 +24,7 @@ main.dark .contact {
   padding: var(--padding-m);
   font-size: 1.3em;
   &:hover {
-    background-color: var(--articlelight);
+    background-color: var(--darkblue);
   }
 }
 .contact p {

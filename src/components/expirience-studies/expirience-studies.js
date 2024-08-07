@@ -1,5 +1,9 @@
 import './expirience-studies.scss'
 
+import { experienceData } from '../../data/data'
+
+import { studiesData } from '../../data/data'
+
 export const experienceAndStudies = () => {
   document.addEventListener('DOMContentLoaded', function () {
     const aboutMeSkillsSection = document.querySelector('.aboutme-skills')
@@ -17,12 +21,12 @@ export const experienceAndStudies = () => {
     const experienceTab = document.createElement('button')
     experienceTab.id = 'experienceTab'
     experienceTab.classList.add('tab', 'active')
-    experienceTab.textContent = 'Experience'
+    experienceTab.textContent = 'Experiencia'
 
     const studiesTab = document.createElement('button')
     studiesTab.id = 'studiesTab'
     studiesTab.classList.add('tab')
-    studiesTab.textContent = 'Studies'
+    studiesTab.textContent = 'Estudios'
 
     tabs.appendChild(experienceTab)
     tabs.appendChild(studiesTab)
@@ -32,34 +36,19 @@ export const experienceAndStudies = () => {
 
     const experienceContent = document.createElement('div')
     experienceContent.id = 'experienceContent'
-    const experienceParagraph1 = document.createElement('p')
-    experienceParagraph1.textContent =
-      '2016 - 2017: Community Manager - Tellmebye'
-    const experienceParagraph2 = document.createElement('p')
-    experienceParagraph2.textContent =
-      '2017 - 2024: Gestor de Conocimientos / Supervisor de Operaciones / Gestor de Proyectos - Konecta'
-    const experienceParagraph3 = document.createElement('p')
-    experienceParagraph3.textContent =
-      '2024 - (Actualidad): Gestor Back Office - Trebol Energia'
-
-    experienceContent.appendChild(experienceParagraph1)
-    experienceContent.appendChild(experienceParagraph2)
-    experienceContent.appendChild(experienceParagraph3)
+    experienceData.forEach((text) => {
+      const paragraph = document.createElement('p')
+      paragraph.textContent = text
+      experienceContent.appendChild(paragraph)
+    })
 
     const studiesContent = document.createElement('div')
     studiesContent.id = 'studiesContent'
-    const studiesParagraph1 = document.createElement('p')
-    studiesParagraph1.textContent =
-      '2011 - 2014: CFGM - Sistemas Microinformaticos y Redes (IES Thos I Codina)'
-    const studiesParagraph2 = document.createElement('p')
-    studiesParagraph2.textContent =
-      '2015 - 2017: CFGS - Gestión de Ventas y Espacios Comerciales (IES Thos I Codina)'
-    const studiesParagraph3 = document.createElement('p')
-    studiesParagraph3.textContent =
-      'Enero 2024 - Actualidad: Master - Bootcamp - Fullstack Developer (Rock The Code)'
-    studiesContent.appendChild(studiesParagraph1)
-    studiesContent.appendChild(studiesParagraph2)
-    studiesContent.appendChild(studiesParagraph3)
+    studiesData.forEach((text) => {
+      const paragraph = document.createElement('p')
+      paragraph.textContent = text
+      studiesContent.appendChild(paragraph)
+    })
 
     content.appendChild(experienceContent)
     content.appendChild(studiesContent)
@@ -73,6 +62,7 @@ export const experienceAndStudies = () => {
       'afterend',
       experienceAndStudiesSection
     )
+
     experienceTab.addEventListener('click', function () {
       experienceContent.style.display = 'block'
       studiesContent.style.display = 'none'

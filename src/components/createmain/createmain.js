@@ -1,35 +1,5 @@
 import './createmain.scss'
-
-const skills = [
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769584/public/assets/skills/html5_lgrx2j.svg',
-    alt: 'HTML5 Logo'
-  },
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769602/public/assets/skills/javascript_xbibqy.svg',
-    alt: 'Javascript Logo'
-  },
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769632/public/assets/skills/sass_l0m7br.svg',
-    alt: 'SASS Logo'
-  },
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769694/public/assets/skills/vitejs_upmowo.svg',
-    alt: 'Vite Logo'
-  },
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769694/public/assets/skills/vscode_lmwat6.svg',
-    alt: 'VsCode Logo'
-  },
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769694/public/assets/skills/wordpress_c1rouu.svg',
-    alt: 'Wordpress Logo'
-  },
-  {
-    src: 'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769584/public/assets/skills/css3_qx7xyw.svg',
-    alt: 'CSS3 Logo'
-  }
-]
+import { skills } from '../../data/data'
 
 export const createMain = () => {
   const main = document.createElement('main')
