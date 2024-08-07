@@ -40,5 +40,10 @@
     right: -1.6em;
     width: 1.5em;
     height: 1.5em;
+     &:hover {
+    box-shadow: 0px 0px 8px 8px #00eeff;
+}
+  .dark .scroll-up-button:hover {
+    box-shadow: 0 0 8px 8px #a024ff;
 }
 }
