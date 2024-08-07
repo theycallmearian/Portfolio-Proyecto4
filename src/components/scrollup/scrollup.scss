@@ -33,3 +33,17 @@
     box-shadow: 0px 0px 15px 15px #a024ff;
   }
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 560px) {
+ .scroll-up-button {
+    bottom: 0.7em;
+    right: -1.6em;
+    width: 1.5em;
+    height: 1.5em;
+}
