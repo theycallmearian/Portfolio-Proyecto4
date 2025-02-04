@@ -32,7 +32,7 @@ export const projects = [
     description: 'Games Hub creado mediante JS, HTML y SCSS.',
     image:
       'https://res.cloudinary.com/dye4qdrys/image/upload/v1722769578/public/assets/projects/gameshub_rcwevx.png',
-    link: 'https://github.com/theycallmearian/gameshub'
+    link: 'https://gameshubp5.netlify.app/'
   }
 ]
 
